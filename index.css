@@ -3635,3 +3635,412 @@ body[data-theme="light"] .contact-subtitle {
   background: linear-gradient(135deg, #3c45a5 0%, #2e3684 100%);
   color: #ffffff !important;
 }
+
+/* ============================================
+   MOBILE RESPONSIVE FIX - Complete Overhaul
+   ============================================ */
+
+/* Base responsive improvements */
+@media (max-width: 768px) {
+  
+  /* Container & Padding Fix */
+  .container {
+    padding: 1rem;
+    max-width: 100%;
+  }
+  
+  /* ============================================
+     HERO SECTION - Profile
+     ============================================ */
+  
+  .name-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .profile-img {
+    width: 100px !important;
+    height: 100px !important;
+    margin: 0 auto;
+  }
+  
+  .title-wrap {
+    width: 100%;
+  }
+  
+  .title-line h1 {
+    font-size: 1.75rem !important; /* Bigger on mobile */
+    line-height: 1.2;
+  }
+  
+  .mini-badges {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .mini-icon {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  
+  .tagline {
+    font-size: 0.9rem !important;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  
+  /* ============================================
+     SOCIAL ICONS - Bigger & Better Spacing
+     ============================================ */
+  
+  .social-inline {
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+  }
+  
+  .social-inline a {
+    width: 48px !important;
+    height: 48px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .social-inline svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  
+  /* ============================================
+     THEME & GRADIENT TOGGLES
+     ============================================ */
+  
+  .theme-toggle,
+  .gradient-toggle {
+    width: 44px !important;
+    height: 44px !important;
+  }
+  
+  .theme-toggle svg,
+  .gradient-toggle svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+  
+  /* ============================================
+     EXPERIENCE CARDS - Better Mobile Layout
+     ============================================ */
+  
+  .experience-item {
+    padding: 1.25rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0.75rem;
+  }
+  
+  .experience-icon-wrapper {
+    width: 56px !important;
+    height: 56px !important;
+    flex-shrink: 0;
+  }
+  
+  .experience-icon {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  
+  .experience-title-group {
+    width: 100%;
+  }
+  
+  .experience-title {
+    font-size: 1.1rem !important;
+    line-height: 1.3;
+  }
+  
+  .experience-subtitle {
+    font-size: 0.9rem !important;
+    margin-top: 0.25rem;
+  }
+  
+  .experience-period {
+    font-size: 0.85rem !important;
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .experience-description {
+    font-size: 0.95rem !important;
+    line-height: 1.6;
+    margin-top: 1rem;
+  }
+  
+  /* ============================================
+     SKILLS BADGES - Better Wrapping
+     ============================================ */
+  
+  .skill-pill {
+    font-size: 0.85rem !important;
+    padding: 0.5rem 1rem !important;
+    white-space: nowrap;
+  }
+  
+  .skills-grid {
+    gap: 0.75rem;
+    justify-content: center;
+  }
+  
+  /* ============================================
+     PROJECT CARDS - Discord Bot Cards
+     ============================================ */
+  
+  .bot-projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem;
+  }
+  
+  .bot-card {
+    padding: 1.25rem !important;
+  }
+  
+  .bot-header {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .bot-avatar img {
+    width: 64px !important;
+    height: 64px !important;
+  }
+  
+  .bot-name {
+    font-size: 1.15rem !important;
+  }
+  
+  .bot-tag {
+    font-size: 0.85rem !important;
+  }
+  
+  .bot-description {
+    font-size: 0.9rem !important;
+    line-height: 1.6;
+    margin-top: 0.75rem;
+  }
+  
+  .bot-stats {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  
+  .bot-stat {
+    font-size: 0.85rem !important;
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .bot-stat svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  
+  /* Commands section */
+  .bot-commands {
+    margin-top: 1rem;
+  }
+  
+  .command-item {
+    font-size: 0.8rem !important;
+    padding: 0.4rem 0.7rem;
+  }
+  
+  .tech-tag {
+    font-size: 0.75rem !important;
+    padding: 0.4rem 0.7rem;
+  }
+  
+  /* Invite button */
+  .bot-btn-primary {
+    font-size: 0.95rem !important;
+    padding: 0.75rem 1.5rem !important;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* ============================================
+     EDUCATION SECTION
+     ============================================ */
+  
+  .education-item {
+    padding: 1.25rem !important;
+  }
+  
+  .education-icon {
+    width: 56px !important;
+    height: 56px !important;
+  }
+  
+  .education-icon svg {
+    width: 28px !important;
+    height: 28px !important;
+  }
+  
+  .education-title {
+    font-size: 1.05rem !important;
+  }
+  
+  .education-school {
+    font-size: 0.9rem !important;
+  }
+  
+  .education-period {
+    font-size: 0.85rem !important;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  /* ============================================
+     SECTION HEADERS
+     ============================================ */
+  
+  .section-header {
+    font-size: 1.5rem !important;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-header svg {
+    width: 28px !important;
+    height: 28px !important;
+  }
+  
+  /* ============================================
+     CARDS - General
+     ============================================ */
+  
+  .card {
+    padding: 1.25rem !important;
+    margin-bottom: 1.25rem;
+    border-radius: 16px;
+  }
+  
+  /* ============================================
+     UTILITY FIXES
+     ============================================ */
+  
+  /* Better text readability */
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Prevent horizontal overflow */
+  * {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  /* Better touch targets (min 44x44px) */
+  button,
+  a {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ============================================
+   EXTRA SMALL MOBILE (< 480px)
+   ============================================ */
+
+@media (max-width: 480px) {
+  
+  .container {
+    padding: 0.75rem;
+  }
+  
+  .title-line h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  .tagline {
+    font-size: 0.85rem !important;
+  }
+  
+  .social-inline a {
+    width: 44px !important;
+    height: 44px !important;
+  }
+  
+  .social-inline svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+  
+  .experience-title {
+    font-size: 1rem !important;
+  }
+  
+  .bot-name {
+    font-size: 1.05rem !important;
+  }
+  
+  .section-header {
+    font-size: 1.35rem !important;
+  }
+}
+
+/* ============================================
+   TABLET (768px - 1024px)
+   ============================================ */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  
+  .bot-projects-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .container {
+    padding: 2rem;
+  }
+  
+  .title-line h1 {
+    font-size: 2rem !important;
+  }
+}
+
+/* ============================================
+   LANDSCAPE MOBILE
+   ============================================ */
+
+@media (max-height: 600px) and (orientation: landscape) {
+  
+  .profile-img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  .title-line h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  .section-header {
+    font-size: 1.35rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  .card {
+    padding: 1rem !important;
+  }
+}
