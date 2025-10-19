@@ -2321,28 +2321,6 @@ body[data-theme="light"] .skill-desc {
   color: #64748b;
 }
 
-/* Responsive - Mobile */
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  
-  .skill-card {
-    padding: 20px;
-  }
-  
-  .skill-icon {
-    width: 48px;
-    height: 48px;
-  }
-  
-  .skill-icon svg {
-    width: 24px;
-    height: 24px;
-  }
-}
-
 /* Animation saat load */
 @keyframes skill-fade-in {
   from {
@@ -2573,47 +2551,6 @@ body[data-theme="light"] .education-card:hover .edu-year {
   border-color: rgba(0, 0, 0, 0.12);
 }
 
-/* Responsive - Mobile */
-@media (max-width: 768px) {
-  .education-section {
-    gap: 12px;
-  }
-
-  .education-card {
-    flex-direction: column;
-    gap: 16px;
-    padding: 20px;
-  }
-
-  .edu-icon {
-    width: 48px;
-    height: 48px;
-  }
-
-  .edu-icon svg {
-    width: 24px;
-    height: 24px;
-  }
-
-  .edu-degree {
-    font-size: 1rem;
-  }
-
-  .edu-school {
-    font-size: 0.9rem;
-  }
-
-  .edu-details {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .edu-major,
-  .edu-year {
-    font-size: 0.8rem;
-    padding: 4px 10px;
-  }
-}
 
 /* Animation saat load */
 @keyframes edu-fade-in {
@@ -2914,32 +2851,6 @@ body[data-theme="light"] .contact-subtitle {
   color: #64748b;
 }
 
-/* Responsive - Mobile */
-@media (max-width: 768px) {
-  .contact-modern {
-    padding: 32px 24px;
-  }
-
-  .contact-title {
-    font-size: 1.2rem;
-  }
-
-  .contact-subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 24px;
-  }
-
-  .contact-buttons {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .contact-btn {
-    width: 100%;
-    justify-content: center;
-    padding: 12px 24px;
-  }
-}
 
 /* Animation saat load */
 @keyframes contact-fade-in {
@@ -5362,5 +5273,593 @@ a[class*="btn"]:focus-visible {
   .btn,
   [role="button"] {
     display: none !important;
+  }
+}
+
+/* ============================================
+   PRODUCTION MOBILE RESPONSIVE V3
+   Clean, Tested, No Conflicts
+   320px - 768px Support
+   ============================================ */
+
+@media (max-width: 768px) {
+  
+  /* ==========================================
+     BASE RESET - Prevent Issues
+     ========================================== */
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  
+  /* ==========================================
+     CONTAINER
+     ========================================== */
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  /* ==========================================
+     HERO SECTION - Profile
+     ========================================== */
+  
+  .name-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  
+  .profile-img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .title-wrap {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .title-line {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .title-line h1 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+    text-align: center;
+  }
+  
+  .mini-badges {
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .mini-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .tagline {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  
+  /* ==========================================
+     SOCIAL ICONS - Inline Row
+     ========================================== */
+  
+  .social-inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+  }
+  
+  .social-inline a {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .social-inline svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* ==========================================
+     CARDS - General
+     ========================================== */
+  
+  .card,
+  [class*="card"]:not([class*="mini"]) {
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* ==========================================
+     SECTION HEADERS
+     ========================================== */
+  
+  .section-header {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .section-header svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  /* ==========================================
+     EXPERIENCE CARDS - Fixed Layout
+     ========================================== */
+  
+  .experience-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+  
+  .experience-header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .experience-icon-wrapper {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .experience-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .experience-title-group {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .experience-title {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 0.25rem;
+    word-break: break-word;
+  }
+  
+  .experience-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  .experience-period {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+    width: fit-content;
+  }
+  
+  .experience-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-top: 0.75rem;
+  }
+  
+  /* ==========================================
+     EDUCATION CARDS - Fixed Layout
+     ========================================== */
+  
+  .education-item {
+    padding: 1.25rem;
+  }
+  
+  .education-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .education-icon {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .education-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .education-content {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .education-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+  }
+  
+  .education-school {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+  }
+  
+  .education-period {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.75rem;
+    display: inline-block;
+    width: auto;
+  }
+  
+  /* ==========================================
+     TIMELINE - Fixed Spacing
+     ========================================== */
+  
+  .timeline-item {
+    padding-left: 3.5rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  
+  .timeline-icon-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .timeline-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .timeline-line {
+    left: 28px;
+  }
+  
+  /* ==========================================
+     BOT/PROJECT CARDS
+     ========================================== */
+  
+  .bot-card,
+  .project-card {
+    padding: 1.25rem;
+  }
+  
+  .bot-header,
+  .project-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .bot-avatar,
+  .project-icon {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    border-radius: 14px;
+  }
+  
+  .bot-info,
+  .project-info {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .bot-name,
+  .project-name {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  .bot-tag,
+  .project-tag {
+    font-size: 0.85rem;
+    opacity: 0.8;
+  }
+  
+  .bot-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1rem 0;
+  }
+  
+  .bot-stat {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.75rem;
+  }
+  
+  .bot-commands {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.75rem 0;
+  }
+  
+  .command-item {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.65rem;
+  }
+  
+  /* ==========================================
+     DISCORD COMMUNITY CARD
+     ========================================== */
+  
+  .discord-server-card {
+    padding: 1.25rem;
+  }
+  
+  .discord-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .discord-icon {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    border-radius: 50%;
+  }
+  
+  .discord-info {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .discord-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    word-break: break-word;
+  }
+  
+  .discord-id {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .discord-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .discord-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem;
+  }
+  
+  .discord-stat-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  
+  .discord-stat-label {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+  
+  .discord-members {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  .discord-member-avatar {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+  
+  /* ==========================================
+     BUTTONS - Touch Friendly
+     ========================================== */
+  
+  button,
+  .btn,
+  a[class*="btn"] {
+    min-height: 48px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  button svg,
+  .btn svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+  
+  .btn-primary,
+  .bot-btn-primary,
+  .discord-join-btn {
+    width: 100%;
+    min-height: 50px;
+    padding: 0.85rem 1.5rem;
+    font-weight: 600;
+  }
+  
+  .theme-toggle,
+  .gradient-toggle {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+  }
+  
+  .theme-toggle svg,
+  .gradient-toggle svg {
+    width: 22px;
+    height: 22px;
+  }
+  
+  /* ==========================================
+     SKILLS & BADGES
+     ========================================== */
+  
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  
+  .skill-pill {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.9rem;
+    white-space: nowrap;
+  }
+  
+  /* ==========================================
+     GRIDS - Single Column
+     ========================================== */
+  
+  .bot-projects-grid,
+  .projects-grid,
+  [class*="grid"]:not(.discord-members):not(.discord-stats):not(.skills-grid) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  /* ==========================================
+     TEXT - Prevent Overflow
+     ========================================== */
+  
+  h1, h2, h3, h4, h5, h6, p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  /* ==========================================
+     IMAGES - Responsive
+     ========================================== */
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ==========================================
+   EXTRA SMALL (< 360px)
+   ========================================== */
+
+@media (max-width: 360px) {
+  
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  .title-line h1 {
+    font-size: 1.5rem;
+  }
+  
+  .social-inline a {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  .social-inline svg {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .experience-icon-wrapper,
+  .education-icon,
+  .timeline-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
+  
+  .discord-members {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
