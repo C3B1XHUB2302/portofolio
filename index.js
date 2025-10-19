@@ -20,7 +20,7 @@ const DEFAULT_CONFIG = {
 const BOT_API_CONFIG = (() => {
   const hostname = window.location.hostname;
   
-  // Development (localhost)
+  // Local development
   if (hostname === 'localhost' || hostname === '127.0.0.1') {
     return {
       BASE_URL: 'http://localhost:3000/api/bot',
@@ -28,9 +28,12 @@ const BOT_API_CONFIG = (() => {
     };
   }
   
-  // Production - GANTI INI SESUAI PTERODACTYL!
+  // ============================================
+  // PRODUCTION - PTERODACTYL (BUKAN RAILWAY!)
+  // ============================================
   return {
-    BASE_URL: 'http://104.234.236.62:30040/api/bot',  // ← GANTI IP & PORT KAMU!
+    BASE_URL: 'http://104.234.236.62:30040/api/bot',  // ← GANTI INI!
+    // Atau gunakan domain custom kalau ada
     UPDATE_INTERVAL: 30000
   };
 })();
