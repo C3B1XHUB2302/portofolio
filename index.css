@@ -4986,3 +4986,381 @@ body[data-theme="light"] .contact-subtitle {
     background-position: -200% 0;
   }
 }
+
+/* ============================================
+   EMERGENCY RESPONSIVE FIX
+   Apply if website still not responsive
+   ============================================ */
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+/* Box sizing fix */
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+
+/* Mobile base */
+@media (max-width: 768px) {
+  
+  /* Container fix */
+  .container {
+    padding: 1rem !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  
+  /* All cards */
+  .card,
+  [class*="card"] {
+    padding: 1.5rem 1rem !important;
+    margin-bottom: 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* All images */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* All flex containers */
+  [class*="flex"],
+  [class*="row"] {
+    flex-wrap: wrap !important;
+  }
+  
+  /* All grid containers */
+  [class*="grid"] {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Text prevention */
+  h1, h2, h3, h4, h5, h6, p, span, div {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  
+  /* Font scaling */
+  h1 { font-size: clamp(1.5rem, 5vw, 2rem) !important; }
+  h2 { font-size: clamp(1.3rem, 4vw, 1.8rem) !important; }
+  h3 { font-size: clamp(1.1rem, 3.5vw, 1.5rem) !important; }
+  p { font-size: clamp(0.9rem, 2.5vw, 1rem) !important; }
+  
+  /* Button fix */
+  button, .btn, a[class*="btn"] {
+    min-height: 48px !important;
+    width: 100% !important;
+    padding: 0.75rem 1.5rem !important;
+  }
+  
+  /* Icon fix */
+  svg, [class*="icon"] {
+    width: 24px !important;
+    height: 24px !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+/* ============================================
+   CRITICAL FIX - Button Minimum Height
+   Touch-Friendly Requirements (44-48px min)
+   ============================================ */
+
+@media (max-width: 768px) {
+  
+  /* ==========================================
+     FIX ALL BUTTONS - Min 48px Height
+     ========================================== */
+  
+  button,
+  .btn,
+  a[class*="btn"],
+  [class*="button"],
+  input[type="button"],
+  input[type="submit"],
+  [role="button"] {
+    min-height: 48px !important;
+    min-width: 48px !important;
+    padding: 0.75rem 1.5rem !important;
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
+    
+    /* Better touch target */
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    
+    /* Prevent shrinking */
+    flex-shrink: 0 !important;
+    
+    /* Better tap feedback */
+    cursor: pointer !important;
+    user-select: none !important;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* ==========================================
+     SPECIFIC BUTTON TYPES
+     ========================================== */
+  
+  /* Primary buttons - Full width on mobile */
+  .btn-primary,
+  .bot-btn-primary,
+  [class*="primary-btn"],
+  [class*="join-btn"],
+  [class*="invite-btn"] {
+    width: 100% !important;
+    min-height: 52px !important;
+    padding: 0.9rem 1.75rem !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+  }
+  
+  /* Icon buttons - Square */
+  .theme-toggle,
+  .gradient-toggle,
+  [class*="icon-btn"],
+  button[aria-label],
+  button:has(svg:only-child) {
+    min-width: 48px !important;
+    min-height: 48px !important;
+    width: 48px !important;
+    height: 48px !important;
+    padding: 0 !important;
+    border-radius: 12px !important;
+  }
+  
+  /* Social buttons */
+  .social-inline a,
+  [class*="social"] a,
+  [class*="social"] button {
+    min-width: 52px !important;
+    min-height: 52px !important;
+    width: 52px !important;
+    height: 52px !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  /* GitHub/Demo buttons */
+  .btn-secondary,
+  [class*="github-btn"],
+  [class*="demo-btn"],
+  [class*="docs-btn"] {
+    min-height: 48px !important;
+    padding: 0.75rem 1.25rem !important;
+  }
+  
+  /* Skill badges (not buttons, but tappable) */
+  .skill-pill,
+  .skill-badge,
+  [class*="badge"],
+  [class*="tag"]:not([class*="tag-line"]) {
+    min-height: 36px !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.85rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+  }
+  
+  /* ==========================================
+     DISCORD JOIN BUTTONS - Extra Emphasis
+     ========================================== */
+  
+  .discord-join-btn,
+  .discord-server-join-btn,
+  [class*="join-server"] {
+    width: 100% !important;
+    min-height: 54px !important;
+    padding: 1rem 2rem !important;
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+    border-radius: 12px !important;
+    
+    /* Better visual feedback */
+    transition: all 0.3s ease !important;
+  }
+  
+  .discord-join-btn:active,
+  .discord-server-join-btn:active {
+    transform: scale(0.97) !important;
+  }
+  
+  /* ==========================================
+     LINK BUTTONS - Styled as buttons
+     ========================================== */
+  
+  a.btn,
+  a[class*="button"],
+  [class*="btn-link"] {
+    min-height: 48px !important;
+    padding: 0.75rem 1.5rem !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  /* ==========================================
+     COMPACT BUTTONS (in cards/lists)
+     ========================================== */
+  
+  .card button:not([class*="primary"]),
+  [class*="compact"] button {
+    min-height: 44px !important;
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  /* ==========================================
+     HOVER/ACTIVE STATES - Better Feedback
+     ========================================== */
+  
+  button:hover,
+  .btn:hover,
+  a[class*="btn"]:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+  
+  button:active,
+  .btn:active,
+  a[class*="btn"]:active {
+    transform: scale(0.98);
+  }
+  
+  /* ==========================================
+     DISABLED STATE
+     ========================================== */
+  
+  button:disabled,
+  .btn:disabled,
+  [disabled] {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+  }
+  
+  /* ==========================================
+     BUTTON ICONS - Proper Sizing
+     ========================================== */
+  
+  button svg,
+  .btn svg,
+  a[class*="btn"] svg {
+    width: 20px !important;
+    height: 20px !important;
+    flex-shrink: 0 !important;
+  }
+  
+  /* Larger icons for primary buttons */
+  .btn-primary svg,
+  .bot-btn-primary svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+  
+  /* ==========================================
+     BUTTON GROUPS - Proper Spacing
+     ========================================== */
+  
+  [class*="btn-group"],
+  [class*="button-group"] {
+    display: flex !important;
+    gap: 0.75rem !important;
+    flex-wrap: wrap !important;
+  }
+  
+  [class*="btn-group"] button,
+  [class*="button-group"] button {
+    flex: 1;
+    min-width: 120px;
+  }
+  
+  /* ==========================================
+     FORM BUTTONS
+     ========================================== */
+  
+  form button,
+  form input[type="submit"],
+  form input[type="button"] {
+    width: 100% !important;
+    min-height: 50px !important;
+    font-weight: 600 !important;
+  }
+}
+
+/* ==========================================
+   EXTRA SMALL DEVICES (< 360px)
+   ========================================== */
+
+@media (max-width: 360px) {
+  
+  button,
+  .btn {
+    min-height: 44px !important;
+    padding: 0.65rem 1.25rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .btn-primary,
+  .bot-btn-primary {
+    min-height: 48px !important;
+  }
+  
+  .social-inline a {
+    min-width: 48px !important;
+    min-height: 48px !important;
+    width: 48px !important;
+    height: 48px !important;
+  }
+}
+
+/* ==========================================
+   LANDSCAPE MODE - Slightly Smaller
+   ========================================== */
+
+@media (max-height: 600px) and (orientation: landscape) {
+  
+  button,
+  .btn {
+    min-height: 44px !important;
+    padding: 0.6rem 1.25rem !important;
+  }
+  
+  .btn-primary {
+    min-height: 46px !important;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY - Focus Visible
+   ========================================== */
+
+button:focus-visible,
+.btn:focus-visible,
+a[class*="btn"]:focus-visible {
+  outline: 3px solid rgba(88, 101, 242, 0.6) !important;
+  outline-offset: 2px !important;
+}
+
+/* ==========================================
+   PRINT - Hide Interactive Elements
+   ========================================== */
+
+@media print {
+  button,
+  .btn,
+  [role="button"] {
+    display: none !important;
+  }
+}
