@@ -20,16 +20,18 @@ const DEFAULT_CONFIG = {
 const BOT_API_CONFIG = (() => {
   const hostname = window.location.hostname;
   
-  let baseUrl;
+  // Development (localhost)
   if (hostname === 'localhost' || hostname === '127.0.0.1') {
-    baseUrl = 'http://localhost:3000/api/bot';
-  } else {
-    baseUrl = 'https://your-project.railway.app/api/bot';
+    return {
+      BASE_URL: 'http://localhost:3000/api/bot',
+      UPDATE_INTERVAL: 30000
+    };
   }
   
+  // Production - GANTI INI SESUAI PTERODACTYL!
   return {
-    BASE_URL: baseUrl,
-    UPDATE_INTERVAL: 30000 // 30 seconds
+    BASE_URL: 'http://104.234.236.62:30040/api/bot',  // ← GANTI IP & PORT KAMU!
+    UPDATE_INTERVAL: 30000
   };
 })();
 
