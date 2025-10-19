@@ -29,11 +29,10 @@ const BOT_API_CONFIG = (() => {
   }
   
   // ============================================
-  // PRODUCTION - PTERODACTYL (BUKAN RAILWAY!)
+  // PRODUCTION - PTERODACTYL
   // ============================================
   return {
-    BASE_URL: 'http://104.234.236.62:30040/api/bot',  // ← GANTI INI!
-    // Atau gunakan domain custom kalau ada
+    BASE_URL: 'http://104.234.236.62:30040/api/bot',  // ← GANTI SESUAI IP KAMU!
     UPDATE_INTERVAL: 30000
   };
 })();
