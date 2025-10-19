@@ -612,3 +612,23 @@ document.addEventListener('DOMContentLoaded', () => {
 // ============================================
 
 console.log('✅ index.js loaded successfully');
+
+// Truncate Discord Server ID for mobile
+function truncateDiscordID() {
+  const isMobile = window.innerWidth <= 768;
+  
+  document.querySelectorAll('.discord-id, .discord-server-id').forEach(el => {
+    const fullID = el.textContent.replace('ID: ', '');
+    
+    if (isMobile && fullID.length > 15) {
+      // Show first 6 and last 4 digits
+      const truncated = `${fullID.substring(0, 6)}...${fullID.substring(fullID.length - 4)}`;
+      el.textContent = `ID: ${truncated}`;
+      el.title = `Full ID: ${fullID}`; // Show on hover/long press
+    }
+  });
+}
+
+// Run on load and resize
+window.addEventListener('load', truncateDiscordID);
+window.addEventListener('resize', truncateDiscordID);
