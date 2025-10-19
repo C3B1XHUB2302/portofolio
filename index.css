@@ -5863,3 +5863,656 @@ a[class*="btn"]:focus-visible {
     grid-template-columns: repeat(5, 1fr);
   }
 }
+
+/* ============================================
+   TARGETED FIX - 5 Specific Issues
+   Production Ready - Tested 320px
+   ============================================ */
+
+@media (max-width: 768px) {
+  
+  /* ==========================================
+     FIX 1: PROFILE SECTION - Centered & Clean
+     ========================================== */
+  
+  /* Hero container */
+  .card:first-of-type,
+  section:first-of-type .card {
+    padding: 1.5rem 1rem;
+  }
+  
+  /* Name row - force column layout */
+  .name-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.25rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Profile image - centered */
+  .profile-img {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+  }
+  
+  /* Title wrapper */
+  .title-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Title line */
+  .title-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  
+  /* Name heading */
+  .title-line h1 {
+    font-size: 1.65rem;
+    line-height: 1.3;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+  }
+  
+  /* Badges - centered */
+  .mini-badges {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .mini-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+  
+  /* Tagline */
+  .tagline {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    width: 100%;
+    word-break: break-word;
+  }
+  
+  /* Social icons - inline row */
+  .social-inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1.5rem auto 0;
+    width: 100%;
+  }
+  
+  .social-inline a {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .social-inline svg {
+    width: 22px;
+    height: 22px;
+  }
+  
+  /* ==========================================
+     FIX 2: EDUCATION CARDS - Consistent Year Badge
+     ========================================== */
+  
+  .education-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    gap: 0;
+  }
+  
+  /* Education header - icon + content */
+  .education-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  
+  /* Icon wrapper */
+  .education-icon {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+  }
+  
+  .education-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+  
+  /* Education content */
+  .education-content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  
+  /* Title */
+  .education-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0;
+    word-break: break-word;
+  }
+  
+  /* School name */
+  .education-school {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    line-height: 1.4;
+    margin: 0;
+  }
+  
+  /* Year badge - CONSISTENT for all cards! */
+  .education-period {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.4rem 0.85rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+    white-space: nowrap;
+    margin-top: 0.65rem;
+    align-self: flex-start;
+  }
+  
+  /* Force same styling for all education items */
+  .education-item:nth-child(1) .education-period,
+  .education-item:nth-child(2) .education-period,
+  .education-item:nth-child(3) .education-period {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.85rem;
+    margin-top: 0.65rem;
+  }
+  
+  /* ==========================================
+     FIX 3: TIMELINE - Icon Always Positioned
+     ========================================== */
+  
+  /* Timeline container */
+  .timeline,
+  [class*="timeline-container"] {
+    position: relative;
+  }
+  
+  /* Timeline item */
+  .timeline-item {
+    position: relative;
+    padding-left: 4rem;
+    padding-top: 0;
+    padding-bottom: 1.5rem;
+    margin-bottom: 0;
+  }
+  
+  /* Timeline icon wrapper - ABSOLUTE positioning */
+  .timeline-icon-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    z-index: 2;
+    flex-shrink: 0;
+  }
+  
+  /* Timeline icon */
+  .timeline-icon {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+  }
+  
+  /* Timeline content - proper spacing */
+  .timeline-content {
+    width: 100%;
+    padding-left: 0;
+  }
+  
+  /* Timeline title */
+  .timeline-title,
+  .timeline-item h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.35rem;
+  }
+  
+  /* Timeline period */
+  .timeline-period,
+  .timeline-item .experience-period {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Timeline description */
+  .timeline-description,
+  .timeline-item .experience-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+  }
+  
+  /* Timeline line */
+  .timeline-line {
+    position: absolute;
+    left: 28px;
+    top: 56px;
+    bottom: 0;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Last item - no line */
+  .timeline-item:last-child .timeline-line {
+    display: none;
+  }
+  
+  /* ==========================================
+     FIX 4: PROJECT CARDS - Better Icon Layout
+     ========================================== */
+  
+  /* Project card container */
+  .project-card,
+  [class*="project-card"] {
+    padding: 1.25rem;
+  }
+  
+  /* Project header - icon + info */
+  .project-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  
+  /* Project icon - fixed size */
+  .project-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+  }
+  
+  .project-icon img,
+  .project-icon svg {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+  
+  /* Project info */
+  .project-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  /* Project title */
+  .project-title,
+  .project-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0;
+    word-break: break-word;
+  }
+  
+  /* Project subtitle */
+  .project-subtitle {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin: 0;
+  }
+  
+  /* Project description */
+  .project-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Project tech badges */
+  .project-tech,
+  [class*="tech-tags"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.75rem 0;
+  }
+  
+  .tech-tag,
+  .project-tech span {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  
+  /* Project buttons */
+  .project-buttons,
+  .project-card .btn {
+    margin-top: 1rem;
+  }
+  
+  /* ==========================================
+     FIX 5: DISCORD COMMUNITY - Auto-scaling Text
+     ========================================== */
+  
+  /* Discord card */
+  .discord-server-card,
+  .discord-community-card {
+    padding: 1.25rem;
+  }
+  
+  /* Discord header */
+  .discord-header,
+  .discord-server-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  
+  /* Discord icon */
+  .discord-icon,
+  .discord-server-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .discord-icon img,
+  .discord-server-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Discord info */
+  .discord-info,
+  .discord-server-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  
+  /* Discord server name - AUTO SCALING! */
+  .discord-name,
+  .discord-server-name {
+    font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0;
+    
+    /* Smart truncation */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+  }
+  
+  /* Discord server ID - AUTO SCALING with ellipsis! */
+  .discord-id,
+  .discord-server-id {
+    font-size: clamp(0.7rem, 2.2vw, 0.75rem);
+    font-family: 'Courier New', Consolas, monospace;
+    opacity: 0.65;
+    letter-spacing: 0.01em;
+    margin: 0;
+    
+    /* Truncate long IDs */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+  
+  /* Discord badges */
+  .discord-badges {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+  
+  .discord-badge {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  /* Discord join button */
+  .discord-join-btn,
+  .discord-server-join-btn {
+    width: 100%;
+    min-height: 50px;
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem 0;
+  }
+  
+  /* Discord stats - 2 columns */
+  .discord-stats,
+  .discord-server-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin: 1rem 0;
+  }
+  
+  .discord-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.85rem 0.5rem;
+  }
+  
+  .discord-stat-value {
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+  
+  .discord-stat-label {
+    font-size: 0.8rem;
+    opacity: 0.75;
+  }
+  
+  /* Discord members grid */
+  .discord-members {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5rem;
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .discord-member-avatar {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  /* Discord footer text */
+  .discord-footer-text {
+    font-size: 0.75rem;
+    text-align: center;
+    opacity: 0.6;
+    margin-top: 0.75rem;
+    line-height: 1.5;
+  }
+}
+
+/* ==========================================
+   EXTRA SMALL DEVICES (< 360px)
+   ========================================== */
+
+@media (max-width: 360px) {
+  
+  /* Profile adjustments */
+  .profile-img {
+    width: 90px;
+    height: 90px;
+    min-width: 90px;
+    min-height: 90px;
+  }
+  
+  .title-line h1 {
+    font-size: 1.5rem;
+  }
+  
+  .social-inline a {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  .social-inline svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Education year badges */
+  .education-period {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+  }
+  
+  /* Timeline adjustments */
+  .timeline-item {
+    padding-left: 3.5rem;
+  }
+  
+  .timeline-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+  }
+  
+  .timeline-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .timeline-line {
+    left: 25px;
+  }
+  
+  /* Project icons */
+  .project-icon {
+    width: 54px;
+    height: 54px;
+    min-width: 54px;
+    min-height: 54px;
+  }
+  
+  .project-icon img,
+  .project-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  /* Discord adjustments */
+  .discord-icon {
+    width: 54px;
+    height: 54px;
+    min-width: 54px;
+    min-height: 54px;
+  }
+  
+  .discord-name {
+    font-size: 0.95rem;
+  }
+  
+  .discord-id {
+    font-size: 0.7rem;
+  }
+  
+  .discord-members {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
