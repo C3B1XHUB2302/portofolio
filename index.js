@@ -29,10 +29,12 @@ const BOT_API_CONFIG = (() => {
   }
   
   // ============================================
-  // PRODUCTION - CLOUDFLARE TUNNEL (HTTPS!)
+  // PRODUCTION - CORS Proxy (NO PC REQUIRED!)
   // ============================================
+  const PTERODACTYL_API = 'http://104.234.236.62:30040';
+  
   return {
-    BASE_URL: 'https://dust-helicopter-consumers-lancaster.trycloudflare.com/api/bot',  // ← GANTI DENGAN URL KAMU!
+    BASE_URL: `https://api.allorigins.win/raw?url=${encodeURIComponent(PTERODACTYL_API + '/api/bot')}`,
     UPDATE_INTERVAL: 30000
   };
 })();
